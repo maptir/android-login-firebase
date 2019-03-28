@@ -23,8 +23,20 @@ public class SignIn extends AppCompatActivity {
 
     public void callSignOut(View view) {
         mAuth.signOut();
-        Intent intent = new Intent(SignIn.this, MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         finish();
         startActivity(intent);
+    }
+
+    public void callNewPost(View view) {
+        startActivity(new Intent(getApplicationContext(), NewPost.class));
+    }
+
+    public void callViewPost(View view) {
+        startActivity(new Intent(getApplicationContext(), ViewPost.class));
+    }
+
+    public void callLocationService(View view) {
+        startActivity(new Intent(getApplicationContext(), ViewLocation.class));
     }
 }

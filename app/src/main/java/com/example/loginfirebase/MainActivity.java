@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 Log.d(TAG, "Sign In is successful: " + task.isSuccessful());
                 if(task.isSuccessful()) {
-                    Intent intent = new Intent(MainActivity.this, SignIn.class);
+                    Intent intent = new Intent(getApplicationContext(), SignIn.class);
                     finish();
                     startActivity(intent);
                 } else {
